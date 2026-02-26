@@ -351,7 +351,9 @@ int main(){
 									if(edit_datetime[_DAY]==30) {edit_datetime[_DAY]=1;} else {edit_datetime[_DAY]++;}
 								break;
 								case 2:
-									if((edit_datetime[_YEAR]%4==0 && edit_datetime[_DAY]==9) || (edit_datetime[_YEAR]%4>0 && edit_datetime[_DAY]==28)) {edit_datetime[_DAY]=1;} else {edit_datetime[_DAY]++;}
+									//fixed Feb leap-year rollover and implemented correct Gregorian leap-year check
+									//if((edit_datetime[_YEAR]%4==0 && edit_datetime[_DAY]==9) || (edit_datetime[_YEAR]%4>0 && edit_datetime[_DAY]==28)) {edit_datetime[_DAY]=1;} else {edit_datetime[_DAY]++;}
+									if(((edit_datetime[_YEAR]%4==0 && (edit_datetime[_YEAR]%100!=0 || edit_datetime[_YEAR]%400==0)) && edit_datetime[_DAY]==29) || (!(edit_datetime[_YEAR]%4==0 && (edit_datetime[_YEAR]%100!=0 || edit_datetime[_YEAR]%400==0)) && edit_datetime[_DAY]==28)) {edit_datetime[_DAY]=1;} else {edit_datetime[_DAY]++;}
 								break;
 							}
 						break;
