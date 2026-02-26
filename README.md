@@ -22,6 +22,7 @@ The DS port is still available here: [https://sourceforge.net/projects/rtcread-d
 ## Fixed Issues
 
 - Both the original GBA and DS releases contained a February leap-year rollover bug, where the date incorrectly rolled over on Feb 09 instead of Feb 29.
-- The original implementation assumed every fourth year is a leap year (year % 4 == 0), which is not fully Gregorian-compliant and incorrectly treats certain century years (e.g., 2100) as leap years.
+- The original implementation assumed every fourth year is a leap year (year % 4 == 0), which incorrectly treats certain century years (e.g., 2100) as leap years.
+
 
 
