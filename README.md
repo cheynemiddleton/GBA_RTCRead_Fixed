@@ -22,6 +22,7 @@ The DS port is still available here: [https://sourceforge.net/projects/rtcread-d
 ## Fixed Issues
 
 - [February rollover bug](https://github.com/megaboyexe/GBA_RTCRead/issues/1) in the original release (rolled over Feb 09 instead of Feb 29)
-- Leap-year logic updated to follow the Gregorian calendar, ensuring February 29 appears only in valid leap years
+- Leap-year logic updated to follow the Gregorian calendar, ensuring Feb 29 appears only in valid leap years
 - Note: The GBA RTC supports only 2000–2099; the Gregorian leap-year logic is implemented for correctness and potential future use beyond 2099
+
 
